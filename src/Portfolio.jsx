@@ -160,7 +160,7 @@ export default function Portfolio() {
           : "Sistem pencatatan prestasi mahasiswa dengan akses berbasis peran dan pelaporan.",
       tech: ["Bootstrap", "CSS", "JavaScript", "PHP", "MySQL"],
       img: "/assets/projects/sipresma.png",
-      link: "https://github.com/mhmdzki/sipresma",
+      link: "https://github.com/FarhanMawaludin/PBL-SIPRESMA",
     },
     {
       id: 3,
@@ -171,7 +171,7 @@ export default function Portfolio() {
           : "Sistem penjualan online berbasis web dengan manajemen produk dan fitur keranjang.",
       tech: ["HTML", "CSS", "JS", "PHP"],
       img: "/assets/projects/chadshop.png",
-      link: "https://github.com/mhmdzki/chadshop",
+      link: "https://github.com/mhmdzki/PWL_Zaki_2E",
     },
   ];
 
