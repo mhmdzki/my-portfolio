@@ -148,7 +148,7 @@ export default function Portfolio() {
           ? "Internship management system with recommendation feature built using Laravel and MySQL."
           : "Sistem manajemen magang dengan fitur rekomendasi dibangun menggunakan Laravel dan MySQL.",
       tech: ["Laravel", "MySQL", "PHP", "JavaScript", "Tailwind"],
-      img: "/assets/projects/sigmagang.png",
+      img: "assets/projects/sigmagang.png",
       link: "https://github.com/mhmdzki/sigmagang",
     },
     {
@@ -352,7 +352,7 @@ export default function Portfolio() {
                 <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-blue-200/30 to-purple-300/25 blur-3xl opacity-80"></div>
 
                 <motion.img
-                  src="/assets/zaki.png"
+                  src="./assets/zaki.png"
                   alt="Muhammad Zaki"
                   className="relative w-full aspect-square object-cover rounded-full shadow-2xl"
                   animate={{ scale: [1, 1.02, 1] }}
