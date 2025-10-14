@@ -148,7 +148,7 @@ export default function Portfolio() {
           ? "Internship management system with recommendation feature built using Laravel and MySQL."
           : "Sistem manajemen magang dengan fitur rekomendasi dibangun menggunakan Laravel dan MySQL.",
       tech: ["Laravel", "MySQL", "PHP", "JavaScript", "Tailwind"],
-      img: "/assets/projects/sigmagang.png",
+      img: "assets/projects/sigmagang.png",
       link: "https://github.com/mhmdzki/sigmagang",
     },
     {
