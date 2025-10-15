@@ -94,12 +94,11 @@ export default function Portfolio() {
   const t = {
     en: {
       nav: ["// HOME", "// PROJECTS", "// SKILLS", "// EXPERIENCE", "// CONTACT"],
-      role: "// FULL-STACK DEVELOPER",
       hi: "Hi, I'm",
       bioShort:
-        "A 5th-semester Informatics Engineering student at Politeknik Negeri Malang with a strong interest in full stack development and 2+ years building apps using Laravel, Flutter and modern databases.",
+        "A 5th-semester Informatics Engineering student at Politeknik Negeri Malang with 2+ years experience building web and mobile apps using Laravel, Flutter, and modern databases.",
       bioLong:
-        "A 5th-semester Informatics Engineering student at Politeknik Negeri Malang with a strong interest in full stack development. Has over 2 years of experience building full stack applications using Laravel, Flutter, and modern databases. Currently expanding knowledge in mobile development, business intelligence, machine learning, and computer vision. Enthusiastic about building efficient, scalable, and user-centered systems as part of a professional development team.",
+        "I’m a 5th-semester Informatics Engineering student at Politeknik Negeri Malang learning full-stack development, focusing mainly on frontend design and implementation. I also have experience in QA testing and data analysis, which allows me to ensure both functionality and quality in the projects I work on. Over the past 2+ years, I’ve actively contributed to web projects, and still learning to sharpen my skills. I’m passionate about creating intuitive, user-focused solutions and eager to bring my expertise to collaborative, professional environments.",
       download: "Download CV",
       projectsTitle: "<PROJECTS/> ARCHIVE",
       projectsDesc: "// A few projects I've worked on",
@@ -159,7 +158,7 @@ export default function Portfolio() {
           ? "Student achievement recording system with role-based access and reporting."
           : "Sistem pencatatan prestasi mahasiswa dengan akses berbasis peran dan pelaporan.",
       tech: ["Bootstrap", "CSS", "JavaScript", "PHP", "MySQL"],
-      img: "/assets/projects/sipresma.png",
+      img: "assets/projects/sipresma.png",
       link: "https://github.com/FarhanMawaludin/PBL-SIPRESMA",
     },
     {
@@ -170,15 +169,54 @@ export default function Portfolio() {
           ? "Web-based online sales system with product management and cart features."
           : "Sistem penjualan online berbasis web dengan manajemen produk dan fitur keranjang.",
       tech: ["HTML", "CSS", "JS", "PHP"],
-      img: "/assets/projects/chadshop.png",
+      img: "assets/projects/chadshop.png",
       link: "https://github.com/mhmdzki/PWL_Zaki_2E",
     },
+    {
+    id: 3,
+    title: "Newstingting - News Reading Platform",
+    description:
+      language === "en"
+        ? "A web-based news reading platform that allows users to browse, search, and read articles easily."
+        : "Platform web untuk membaca berita yang memungkinkan pengguna menjelajah, mencari, dan membaca artikel dengan mudah.",
+    tech: ["HTML", "CSS","PHP", "MySQL"],
+    img: "assets/projects/newstingting.png",
+    link: "https://github.com/lostboiii/basis-data-kel5",
+  }
+
   ];
 
   const skills = [
-    { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "React"], icon: <Code /> },
-    { category: "Backend", items: ["Laravel", "PHP", "MySQL", "Node.js"], icon: <Server /> },
-    { category: "Tools", items: ["Git", "VS Code", "Figma", "Flutter"], icon: <Zap /> },
+    {
+      category: "Frontend",
+      icon: <Code />,
+      items: [
+        { name: "HTML", percent: 90 },
+        { name: "CSS", percent: 85 },
+        { name: "JavaScript", percent: 80 },
+        { name: "React", percent: 60 },
+      ],
+    },
+    {
+      category: "Backend",
+      icon: <Server />,
+      items: [
+        { name: "Laravel", percent: 85 },
+        { name: "PHP", percent: 80 },
+        { name: "MySQL", percent: 85 },
+        { name: "Node.js", percent: 60 },
+      ],
+    },
+    {
+      category: "Tools",
+      icon: <Zap />,
+      items: [
+        { name: "Git", percent: 95 },
+        { name: "VS Code", percent: 90 },
+        { name: "Figma", percent: 70 },
+        { name: "Flutter", percent: 60 },
+      ],
+    },
   ];
 
   const experience = {
@@ -241,12 +279,7 @@ export default function Portfolio() {
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/60 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-            <div className="w-10 h-10 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white shadow-md">
-              <span className="font-bold">Z</span>
-            </div>
-            <div className="text-sm font-semibold text-blue-600">M.ZAKI</div>
-          </div>
+          
 
           <div className="hidden md:flex items-center gap-6 text-sm">
             {copy.nav.map((label, idx) => {
@@ -444,17 +477,23 @@ export default function Portfolio() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {skills.map((s) => (
-                <motion.div key={s.category} className="p-6 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-800 rounded-lg hover:shadow-lg transition">
+                <motion.div
+                  key={s.category}
+                  className="p-6 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-800 rounded-lg hover:shadow-lg transition"
+                >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="text-blue-600">{s.icon}</div>
                     <h3 className="text-lg font-semibold">{s.category}</h3>
                   </div>
                   <ul className="space-y-3">
                     {s.items.map((it) => (
-                      <li key={it} className="flex items-center justify-between">
-                        <span className="text-slate-700 dark:text-slate-200">{it}</span>
+                      <li key={it.name} className="flex items-center justify-between">
+                        <span className="text-slate-700 dark:text-slate-200">{it.name}</span>
                         <div className="w-1/2 bg-slate-100 dark:bg-slate-700 h-2 rounded-full">
-                          <div className="h-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600" style={{ width: "82%" }} />
+                          <div
+                            className="h-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"
+                            style={{ width: `${it.percent}%` }}
+                          />
                         </div>
                       </li>
                     ))}
